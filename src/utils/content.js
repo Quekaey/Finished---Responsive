@@ -426,8 +426,8 @@ const testimonials = [
     id: 13,
     rating: 5,
     description:
-      "With NoteFlow, I’m able to keep track of ideas, strategies, and feedback effortlessly. The contextual reminders are perfect \
-    for ensuring I follow up on key tasks and deadlines. It’s become an essential part of my daily routine.",
+      "Our website redesign increased our inbound leads by 45%. \
+    The StartGrid team really understands business goals.",
     src: new URL("../assets/headshots/img-12.webp", import.meta.url),
     name: "Katherine Evans",
     title: "Marketing Director",
@@ -436,21 +436,21 @@ const testimonials = [
     id: 14,
     rating: 4,
     description:
-      "As someone who juggles multiple responsibilities, NoteFlow keeps me organized without any hassle. The seamless integrations \
-    with tools like Slack and Google Drive allow my team and I to stay in sync and work more efficiently.",
+      "Their mentorship and playbooks saved me months of trial and error. \
+    I now run a profitable web design business.",
     src: new URL("../assets/headshots/img-15.webp", import.meta.url),
-    name: "Lucas King",
-    title: "CEO",
+    name: "Amanda Brooks",
+    title: "Web Agency Owner",
   },
   {
     id: 15,
     rating: 5,
     description:
-      "NoteFlow's ability to capture and organize my notes in such a detailed yet easy-to-use way has made a huge difference \
-    in my creative process. Whether I'm brainstorming or taking project notes, it’s my go-to app for staying organized.",
+      "StartGrid gave me the structure I needed to finally launch my own agency. \
+    Within two months, I signed my first three clients.",
     src: new URL("../assets/headshots/img-2.webp", import.meta.url),
-    name: "Natalie James",
-    title: "Graphic Designer",
+    name: "Chinonso Okeke",
+    title: "Digital Agency Founder",
   },
 ];
 

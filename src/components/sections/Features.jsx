@@ -32,9 +32,9 @@ export default function Features() {
           transition={{ duration: 0.6, ease: easing }}
           className="mb-28 text-center text-6xl/18 font-semibold tracking-tighter max-xl:mb-18 max-xl:text-5xl/16 max-lg:text-4xl/10 max-lg:tracking-tight max-sm:text-3xl/9 max-sm:tracking-tighter"
         >
-          All The Tools You Need to <br />
-          <span className="text-primary-500 primary-glow">Supercharge </span>
-          Your Note Taking
+          StartGrid is a hybrid digital <br />
+          <span className="text-primary-500 primary-glow">Empowerment </span>
+          platform.
         </motion.h2>
 
         {/* Agency Founders */}

@@ -14,12 +14,11 @@ export default function Testimonials() {
             Testimonials
           </p>
           <h2 className="text-primary-50 text-center text-6xl/18 font-semibold tracking-tighter max-xl:text-5xl/16 max-lg:mb-4 max-lg:text-4xl/10 max-lg:tracking-tight max-sm:text-3xl/9 max-sm:tracking-tighter">
-            What our AI-powered <br />
-            notetakers have to say
+            What People Are Saying <br />
+            About StartGrid
           </h2>
           <p className="text-primary-100 px-28 text-center text-xl/loose font-light max-lg:text-lg/8 max-md:px-4">
-            NoteFlow has helped 1000&apos;s supercharge their productivity with
-            cutting edge AI note taking tools
+            Real stories from founders and businesses we’ve empowered
           </p>
         </div>
         <div className="mb-20 grid grid-cols-3 gap-x-6 max-xl:gap-x-4 max-lg:mb-18 max-lg:grid-cols-2 max-sm:grid-cols-1">
