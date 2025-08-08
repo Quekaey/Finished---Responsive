@@ -305,38 +305,38 @@ const testimonials = [
     id: 1,
     rating: 4,
     description:
-      "NoteFlow has completely transformed the way I manage my work notes. The AI-powered organization feature \
-    makes it so easy to find what I need, even weeks after the fact.",
+      "From day one, they treated my business like their own. \
+    I’ve never felt more supported by a partner.",
     src: new URL("../assets/headshots/img-7.webp", import.meta.url),
-    name: "Emily Thompson",
-    title: "Senior Manager",
+    name: "Tunde Bakare",
+    title: "Clothing Brand Owner",
   },
   {
     id: 2,
     rating: 5,
     description:
-      "As a designer, I need a tool that helps me keep track of brainstorming sessions and project notes. NoteFlow’s \
-    voice-to-text transcription is a game-changer!",
+      "StartGrid’s systems work. \
+    I now spend more time with clients and less time figuring out operations.",
     src: new URL("../assets/headshots/img-3.webp", import.meta.url),
-    name: "Michael Carter",
-    title: "Product Designer",
+    name: "Abdulrahman Bello",
+    title: "Agency Founder",
   },
   {
     id: 3,
     rating: 5,
     description:
-      "I love how NoteFlow integrates with tools like Google Drive and Slack. It makes collaboration with my team so \
-    much smoother. The contextual reminders have helped me stay on top of critical deadlines.",
+      "The results speak for themselves \
+    traffic is up, conversions are higher, and my team is thrilled.",
     src: new URL("../assets/headshots/img-9.webp", import.meta.url),
-    name: "Sarah Lee",
-    title: "Business Analyst",
+    name: "Patricia Collins",
+    title: "SaaS Product Manager",
   },
   {
     id: 4,
     rating: 4,
     description:
-      "The smart organization of my notes is impressive. I used to waste time searching for information, but now \
-    NoteFlow does the heavy lifting, automatically categorizing everything. It’s an indispensable part of my workflow.",
+      "I joined the launch program and landed \
+    my first international client within weeks.",
     src: new URL("../assets/headshots/img-4.webp", import.meta.url),
     name: "Jonathan Moore",
     title: "Software Engineer",
@@ -345,8 +345,8 @@ const testimonials = [
     id: 5,
     rating: 4,
     description:
-      "NoteFlow has made managing multiple projects so much easier. I can quickly access and organize my notes, \
-    and the contextual reminders keep me on track. It’s the best tool I’ve found for staying organized.",
+      "They didn’t just build a website \
+    they built a brand experience my customers love.",
     src: new URL("../assets/headshots/img-15.webp", import.meta.url),
 
     name: "Rachel Foster",
@@ -356,71 +356,71 @@ const testimonials = [
     id: 6,
     rating: 5,
     description:
-      "As a startup founder, my days are packed with meetings and ideas. NoteFlow’s voice-to-text feature lets \
-    me capture thoughts while I’m on the move. Plus, the cloud storage sync keeps everything safe and easily accessible.",
+      "Being part of StartGrid’s founder program \
+    gave me the confidence and network to grow quickly.",
     src: new URL("../assets/headshots/img-5.webp", import.meta.url),
-    name: "Daniel Harris",
-    title: "Entrepreneur",
+    name: "Emeka Eze",
+    title: "Digital Consultant",
   },
   {
     id: 7,
     rating: 4,
     description:
-      "I’ve tried many note-taking apps, but none compare to NoteFlow. The AI-driven categorization helps me keep my \
-    content ideas organized and searchable, saving me hours every week. Highly recommended!",
+      "We wanted a modern, mobile-friendly site. \
+    StartGrid delivered exactly what we needed on time and on budget.",
     src: new URL("../assets/headshots/img-1.webp", import.meta.url),
-    name: "Olivia Carter",
-    title: "Content Strategist",
+    name: "Jessica Lee",
+    title: "Nonprofit Director",
   },
   {
     id: 8,
     rating: 5,
     description:
-      "The voice-to-text transcription is incredibly accurate and saves me so much time when documenting meetings. \
-    Plus, I love how seamlessly it integrates with tools like Trello and Slack. NoteFlow is a must-have for anyone in design.",
+      "Their coaching style is friendly yet firm \
+    they push you to achieve your business goals.",
     src: new URL("../assets/headshots/img-6.webp", import.meta.url),
-    name: "Thomas Williams",
-    title: "UX/UI Designer",
+    name: "Chidera Umeh",
+    title: " Agency Co-Founder",
   },
   {
     id: 9,
     rating: 4,
     description:
-      "I rely heavily on my notes during client calls and follow-ups. The ability to automatically receive reminders \
-    based on my notes has made my follow-up process much smoother and more efficient. NoteFlow has been a game-changer!",
+      "They handled our eCommerce setup flawlessly. \
+    Sales jumped by 30% in the first month after launch.",
     src: new URL("../assets/headshots/img-8.webp", import.meta.url),
-    name: "Jessica Gonzalez",
-    title: "Sales Executive",
+    name: "David Miller",
+    title: "Online Store Owner",
   },
   {
     id: 10,
     rating: 5,
     description:
-      "I can’t say enough about how helpful NoteFlow’s integrations are. Syncing my notes with Google Drive and other apps \
-    has streamlined my work processes. It’s helped me stay organized and efficient in an ever-changing environment.",
+      "I started with no clear plan, \
+    but the framework they provided helped me build a professional agency from scratch.",
     src: new URL("../assets/headshots/img-13.webp", import.meta.url),
-    name: "Aaron Mitchell",
-    title: "Customer Support",
+    name: "Bola Adeyemi",
+    title: "Tech Entrepreneur",
   },
   {
     id: 11,
     rating: 4,
     description:
-      "NoteFlow has been a lifesaver for organizing meeting summaries. The AI organization \
-    categorizes everything, so I no longer have to worry about sorting through piles of documents!",
+      "The community and resources here are unmatched. \
+    You’re never building alone with StartGrid.",
     src: new URL("../assets/headshots/img-10.webp", import.meta.url),
-    name: "Grace Stevens",
-    title: "HR Manager",
+    name: "Sarah Thompson",
+    title: "Startup Founder",
   },
   {
     id: 12,
     rating: 4,
     description:
-      "I’m always jotting down ideas and notes for various writing projects. The voice-to-text feature lets me capture my thoughts \
-    while I’m out and about.",
+      "From branding to launch, StartGrid delivered beyond expectations. \
+    We now get compliments from clients daily.",
     src: new URL("../assets/headshots/img-14.webp", import.meta.url),
-    name: "Ben Turner",
-    title: "Freelance Writer",
+    name: "Oluwaseun Adebayo",
+    title: "Marketing Consultant",
   },
   {
     id: 13,
@@ -429,8 +429,8 @@ const testimonials = [
       "Our website redesign increased our inbound leads by 45%. \
     The StartGrid team really understands business goals.",
     src: new URL("../assets/headshots/img-12.webp", import.meta.url),
-    name: "Katherine Evans",
-    title: "Marketing Director",
+    name: "Ifeanyi Nwosu",
+    title: "Real Estate CEO",
   },
   {
     id: 14,
