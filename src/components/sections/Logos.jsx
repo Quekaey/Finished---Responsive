@@ -6,7 +6,7 @@ export default function Logos() {
       <div className="m-auto max-w-[90rem] px-24 py-28 max-xl:px-16 max-xl:py-24 max-lg:px-8 max-md:px-6">
         <p className="text-primary-50 last m-auto mb-20 text-center text-xl max-xl:text-lg/8 max-sm:mb-16">
           Organizations powered by{" "}
-          <span className="font-bold tracking-tight">NoteFlow</span>
+          <span className="font-bold tracking-tight">StartGrid</span>
         </p>
         <div className="flex flex-col gap-y-16 max-md:flex-row max-md:items-center max-md:justify-around max-sm:gap-x-14">
           <ul className="flex flex-wrap justify-between max-md:flex-col max-md:gap-y-16">

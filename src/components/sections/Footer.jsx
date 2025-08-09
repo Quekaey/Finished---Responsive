@@ -13,7 +13,7 @@ export default function Footer() {
               width={5}
             />
             <p className="text-primary-50 text-xl font-bold tracking-tight max-md:text-lg/8 max-md:tracking-tighter">
-              NoteFlow
+              StartGrid
             </p>
           </a>
         </div>
