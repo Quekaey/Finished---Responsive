@@ -18,7 +18,7 @@ export default function Navigation() {
           width={5}
         />
         <p className="text-xl font-bold tracking-tight max-xl:text-xl max-md:text-lg/8 max-md:tracking-tighter">
-          NoteFlow
+          StartGrid
         </p>
       </a>
 

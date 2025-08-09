@@ -27,7 +27,7 @@ export default function FAQs() {
         </h2>
         <div className="mb-8 text-xl/loose font-light max-lg:text-lg/8 max-sm:text-base/loose">
           <p className="text-primary-100 text-center max-md:text-left max-sm:hidden">
-            The most commonly asked questions about NoteFlow.{" "}
+            The most commonly asked questions about StartGrid.{" "}
             <br className="max-md:hidden" />
             Have any other questions?{" "}
             <a

@@ -117,41 +117,37 @@ const frequentlyAskedQuestions = [
         id: 1,
         alt: "Note Icon",
         Icon: Note,
-        question: "What is NoteFlow?",
+        question: "What is StartGrid?",
         answer:
-          "NoteFlow is an AI-powered note-taking application designed to \
-          help individuals and teams organize, manage, and retrieve notes effortlessly.",
+          "StartGrid is a hybrid digital platform that helps aspiring agency founders launch their own agencies \
+          and provides businesses with top-tier digital services like websites, branding, and marketing strategies.",
       },
       {
         id: 2,
         alt: "Magic Pen Icon",
         Icon: MagicPen,
-        question: "How does NoteFlow use AI to enhance note-taking?",
+        question: "Who can use StartGrid?",
         answer:
-          "NoteFlow uses AI to automatically categorize, summarize, and tag your notes, \
-          making it easier to find exactly what you need. Its intelligent search functionality \
-          helps you locate information by context, keywords, or themes, ensuring that your notes \
-          are always organized and accessible.",
+          "StartGrid is perfect for two groups: individuals who want to start their own digital agencies \
+          and businesses that want to grow online through expert digital solutions.",
       },
       {
         id: 3,
         alt: "Two Users Icon",
         Icon: TwoUsers,
-        question: "Can NoteFlow be used for team collaboration?",
+        question:
+          "Do I need technical skills to start my own agency with StartGrid?",
         answer:
-          "Absolutely! NoteFlow is designed to support both individual users and team collaboration. \
-          You can share notes, collaborate in real time, assign tasks, and track progress within the platform. \
-          This makes it a perfect solution for both personal and professional use.",
+          "No. We provide the tools, templates, and mentorship to help you launch successfully, \
+          even if you have little or no tech experience.",
       },
       {
         id: 4,
         alt: "Cloud Icon",
         Icon: Cloud,
-        question: "Can I access NoteFlow on multiple devices?",
+        question: "How long does it take to launch my agency with StartGrid?",
         answer:
-          "Yes, you can access NoteFlow from any device, including your computer, tablet, \
-          and smartphone. Our app syncs seamlessly across platforms, so your notes are always \
-          up-to-date and available whenever you need them.",
+          "It varies depending on your readiness, but most founders launch within 2–4 weeks.",
       },
     ],
   },
@@ -163,43 +159,38 @@ const frequentlyAskedQuestions = [
         id: 5,
         alt: "Dollar Circle Icon",
         Icon: DollarCircle,
-        question: "What pricing plans does NoteFlow offer?",
+        question:
+          "How much does it cost to join the StartGrid Founder Program?",
         answer:
-          "NoteFlow offers several pricing tiers to meet the needs of both individuals and teams. \
-          We have a free plan with basic features, as well as premium plans that provide advanced features \
-          like unlimited storage, team collaboration tools, and more. You can find detailed information about \
-          each plan on our Pricing page.",
+          "We offer flexible packages depending on your needs. \
+          Pricing starts from an affordable entry plan for new founders. \
+          Contact us for a tailored quote.",
       },
       {
         id: 6,
         alt: "Card Slash Icon",
         Icon: CardSlash,
-        question: "Is there a free trial available for NoteFlow?",
+        question: "Do you offer payment plans?",
         answer:
-          "NoteFlow offers several pricing tiers to meet the needs of both individuals and teams. \
-          We have a free plan with basic features, as well as premium plans that provide advanced features \
-          like unlimited storage, team collaboration tools, and more. You can find detailed information about \
-          each plan on our Pricing page.",
+          "Yes. We have installment options to make it easier for founders and clients to get started.",
       },
       {
         id: 7,
         alt: "Arrow Swap Icon",
         Icon: ArrowSwap,
-        question: "Can I change or cancel my subscription anytime?",
+        question: "Are there hidden fees?",
         answer:
-          "Absolutely! You can upgrade, downgrade, or cancel your subscription at any time through your account \
-          settings. If you decide to cancel, you will still have access to your plan’s features until the end of \
-          your current billing cycle.",
+          "No. All costs are clearly explained upfront.  \
+          Any extra services will be discussed and agreed on before we proceed.",
       },
       {
         id: 8,
         alt: "Lock Icon",
         Icon: Lock,
-        question: "Is my payment information secure with NoteFlow?",
+        question: "Do you charge monthly fees for agency founders?",
         answer:
-          "Yes, we take your security very seriously. All payment transactions are processed through secure, encrypted \
-          channels. NoteFlow uses industry-standard security protocols to ensure your payment information is always protected. \
-          For additional peace of mind, we are also compliant with GDPR and other relevant data protection regulations.",
+          "Only if you subscribe to ongoing mentorship, support, or premium tools. \
+         Our basic package is a one-time setup cost.",
       },
     ],
   },
@@ -211,43 +202,33 @@ const frequentlyAskedQuestions = [
         id: 9,
         alt: "Organization Icon",
         Icon: Organization,
-        question: "How does The Smart Organization feature work?",
+        question: "What’s included in the StartGrid Founder Launch Kit?",
         answer:
-          "NoteFlow's Smart Organization feature uses advanced AI to automatically categorize and tag your notes \
-          based on key topics and themes. The AI-driven analysis ensures that your notes are organized in a way that \
-           makes them easy to search and retrieve, saving you time when you need to find specific information.",
+          "You get agency website templates, business playbooks, proposal templates, branding guides, and one-on-one mentorship.",
       },
       {
         id: 10,
         alt: "SMS Notification Icon",
         Icon: SMSNotification,
-        question: "How do Contextual Reminders help me stay on top of tasks?",
+        question: "Do you offer website design for businesses?",
         answer:
-          "Contextual Reminders use AI to analyze your notes and automatically recognize important tasks, deadlines, \
-              and follow-up actions. Based on this analysis, NoteFlow will send you timely reminders to ensure you never \
-              miss a critical deadline or action point.",
+          "Yes. We design high-conversion websites for businesses in any industry, fully tailored to your brand.",
       },
       {
         id: 11,
         alt: "Microphone Icon",
         Icon: Microphone,
-        question:
-          "Can I dictate notes using the Voice-to-Text Transcription feature?",
+        question: "Is training included for founders?",
         answer:
-          "Yes! NoteFlow’s Voice-to-Text Transcription feature lets you dictate notes in real time. Whether you’re in a \
-           meeting, on the go, or brainstorming ideas, simply speak, and NoteFlow will automatically convert your speech \
-           into organized text. This feature makes capturing ideas effortless and hands-free.",
+          "Absolutely. Founders get training on sales, client management, and project delivery.",
       },
       {
         id: 12,
         alt: "Search Icon",
         Icon: Search,
-        question:
-          "Can I search for specific information using the AI-powered features?",
+        question: "Can you help me find my first clients?",
         answer:
-          "Yes! With NoteFlow’s intelligent search functionality, you can search for specific keywords, topics, or \
-          even context-based information. The AI not only looks for exact matches but also understands the context \
-          of your notes, helping you find relevant information quickly and efficiently.",
+          "Yes. We provide lead generation strategies and, in some cases, share client referrals within our network.",
       },
     ],
   },
@@ -259,42 +240,33 @@ const frequentlyAskedQuestions = [
         id: 13,
         alt: "Organization Icon",
         Icon: Organization,
-        question: "What integrations does NoteFlow support?",
+        question: "Can my website integrate with payment gateways?",
         answer:
-          "NoteFlow integrates with a wide range of tools, including popular apps like Google Drive, Microsoft \
-          OneDrive, Slack, Trello, and more. These integrations allow you to sync your notes with your existing \
-          workflow and collaborate seamlessly across platforms.",
+          "Yes. We support popular gateways like Paystack, Flutterwave, Stripe, and PayPal.",
       },
       {
         id: 14,
         alt: "Integrate Icon",
         Icon: Integrate,
-        question: "Will NoteFlow integrate with other apps in the future?",
+        question: "Do you integrate with CRMs?",
         answer:
-          "We are always working to expand our integration offerings to meet the needs of our users. We frequently \
-        update NoteFlow to support new and popular tools, so be sure to check back for new integrations that may \
-        enhance your experience.",
+          "Yes. We can connect your site with HubSpot, Zoho, Salesforce, and others.",
       },
       {
         id: 15,
         alt: "Import Icon",
         Icon: Import,
-        question:
-          "Can I import existing notes from other platforms into NoteFlow?",
+        question: "Can you set up email marketing tools?",
         answer:
-          "Yes, you can easily import your existing notes from platforms like Evernote, Google Keep, and Microsoft \
-        OneNote into NoteFlow. This ensures a smooth transition without losing any of your important information.",
+          "Yes. We integrate with Mailchimp, ConvertKit, Sendinblue, and other platforms.",
       },
       {
         id: 16,
         alt: "Slack Icon",
         Icon: Slack,
-        question:
-          "Does NoteFlow integrate with team collaboration tools like Slack?",
+        question: "Can you connect to eCommerce platforms?",
         answer:
-          "Absolutely! NoteFlow integrates with Slack, allowing you to share notes and collaborate in real time \
-        with your team. You can even create reminders or action items directly from your notes and have them \
-        sent to your Slack channels.",
+          "Yes. We integrate with WooCommerce, Shopify, BigCommerce, and custom solutions.",
       },
     ],
   },
