@@ -425,22 +425,12 @@ const footerCols = [
   {
     id: 1,
     category: "Home",
-    links: ["FAQ", "Features", "Companies", "Testimonials"],
+    links: ["FAQ", "Features", "Testimonials"],
   },
   {
     id: 2,
-    category: "Pricing",
-    links: ["Plans", "Billing", "Free Trial", "Refunds"],
-  },
-  {
-    id: 3,
     category: "About",
-    links: ["Careers", "Our Story", "Contact", "Policy"],
-  },
-  {
-    id: 4,
-    category: "Community",
-    links: ["Forum", "Stories", "Blog", "Support"],
+    links: ["Careers", "Contact"],
   },
 ];
 
