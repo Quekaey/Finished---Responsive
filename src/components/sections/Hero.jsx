@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import HeroGraphic from "../../assets/graphics/HeroGraphic.webp";
+import HeroSection4 from "../../assets/graphics/HeroSection4.png";
 import { useModalContext } from "../../contexts/ModalContext";
 import ArrowRight from "../icons/ArrowRight";
 import ArrowRightLine from "../icons/ArrowRightLine";
@@ -25,7 +25,7 @@ export default function Hero() {
           transition={{ duration: 0.6, ease: easing }}
           className="text-primary-50 mb-6 text-6xl/18 font-semibold tracking-tighter max-xl:mb-4 max-xl:text-5xl/16 max-lg:text-4xl/10 max-lg:tracking-tight max-sm:text-3xl/9 max-sm:tracking-tighter"
         >
-          Build Your Agency. Grow a Business.
+          Grow Smarter. Start with StartGrid.
         </motion.h1>
 
         <motion.p
@@ -35,8 +35,9 @@ export default function Hero() {
           transition={{ delay: 0.2, duration: 0.6, ease: easing }}
           className="text-primary-100 mb-10 text-xl/loose font-light max-xl:mb-8 max-xl:text-lg/8 max-lg:text-base/loose"
         >
-          Your digital launchpad, empowering founders and businesses <br /> with
-          the systems, support, and strategy to grow online.
+          Your digital launchpad! empowering founders and businesses with expert
+          guidance, AI-driven tools, and smart strategies to accelerate online
+          growth.
         </motion.p>
 
         <motion.div
@@ -110,7 +111,7 @@ export default function Hero() {
         />
 
         <img
-          src={HeroGraphic}
+          src={HeroSection4}
           alt="Hero graphic of an iPhone showing NoteFlows note summarizer"
           loading="lazy"
           data-testid="hero-graphic"

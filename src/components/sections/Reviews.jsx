@@ -17,9 +17,9 @@ export default function Reviews() {
       <p className="text-primary-100 text-xl/loose font-light max-lg:text-base/loose">
         Trusted by{" "}
         <span className="text-primary-500 font-bold tracking-tighter">
-          12,653+{" "}
+          5,653+{" "}
         </span>
-        productivity junkies
+        productivity enthusiasts
       </p>
     </section>
   );

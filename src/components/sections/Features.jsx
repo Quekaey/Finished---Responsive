@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import SmartOrganization from "../../assets/graphics/SmartOrganization.webp";
-import ContextualReminders from "../../assets/graphics/ContextualReminders.webp";
+import SmartOrganization2 from "../../assets/graphics/SmartOrganization2.png";
+import Contextual from "../../assets/graphics/Contextual.png";
 import ArrowRight from "../icons/ArrowRight";
 import ArrowRightLine from "../icons/ArrowRightLine";
 import { useModalContext } from "../../contexts/ModalContext";
@@ -46,7 +46,7 @@ export default function Features() {
         >
           <figure className="max-h-[45rem] max-md:max-w-[90%] max-md:justify-self-center">
             <img
-              src={SmartOrganization}
+              src={SmartOrganization2}
               alt="Smart Organization graphic"
               loading="lazy"
               className="h-auto w-full"
@@ -169,7 +169,7 @@ export default function Features() {
             >
               <li>Conversion-focused websites</li>
               <li>Brand identity design</li>
-              <li>eCommerce and marketing integrations</li>
+              <li>Automated marketing integrations</li>
               <li>Ongoing web support and optimization</li>
             </motion.ul>
 
@@ -215,7 +215,7 @@ export default function Features() {
 
           <figure className="z-1">
             <img
-              src={ContextualReminders}
+              src={Contextual}
               alt="Contextual Reminders graphic"
               loading="lazy"
               className="max-h-[45rem] max-md:max-w-[90%] max-md:justify-self-center"
