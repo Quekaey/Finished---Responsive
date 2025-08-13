@@ -114,7 +114,7 @@ const frequentlyAskedQuestions = [
         Icon: Note,
         question: "What is StartGrid?",
         answer:
-          "StartGrid is a hybrid digital platform that helps aspiring agency founders launch their own agencies \
+          "StartGrid is a hybrid digital platform that helps aspiring founders launch their own agencies \
           and provides businesses with top-tier digital services like websites, branding, and marketing strategies.",
       },
       {
