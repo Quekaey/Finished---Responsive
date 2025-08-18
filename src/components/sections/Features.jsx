@@ -15,12 +15,14 @@ export default function Features() {
       aria-labelledby="features-heading"
       style={{ contentVisibility: "auto" }}
       className="bg-primary-1500 overflow-hidden bg-[url('../src/assets/Noise.webp')] bg-repeat"
+      data-testid="features-section"
     >
       <div className="text-primary-50 relative m-auto max-w-[90rem] px-24 py-32 max-xl:px-16 max-xl:py-24 max-lg:px-8 max-md:px-6">
         {/* Blurred background */}
         <div
           className="absolute top-[50%] left-[100%] h-[62.5rem] w-[62.5rem] -translate-[50%] rounded-full opacity-100 blur-[40rem] max-xl:h-[35rem] max-xl:w-[35rem] max-xl:blur-[10rem] max-lg:left-[90%] max-lg:h-[20rem] max-lg:w-[20rem]"
           style={{ willChange: "transform" }}
+          aria-hidden="true"
         />
 
         {/* Section Heading */}
@@ -43,19 +45,21 @@ export default function Features() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.6, ease: easing }}
           className="mb-20 grid grid-cols-2 items-center gap-x-16 max-xl:mb-12 max-md:mb-16 max-md:grid-cols-1 max-md:gap-y-10"
+          data-testid="agency-founders-section"
         >
           <figure className="max-h-[45rem] max-md:max-w-[90%] max-md:justify-self-center">
             <img
               src={SmartOrganization2}
-              alt="Smart Organization graphic"
+              alt="Smart Organization graphic showing AI-powered note categorization and organization tools"
               loading="lazy"
-              className="h-auto w-full"
+              className="img-hover h-auto w-full"
               data-testid="features-smart-org-graphic"
+              decoding="async"
             />
           </figure>
 
           <div className="z-1 max-w-lg justify-self-end max-md:row-start-1 max-md:max-w-max">
-            <motion.p
+            <motion.h3
               initial={{ x: -20, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.3, duration: 0.6, ease: easing }}
@@ -63,7 +67,7 @@ export default function Features() {
               data-testid="features-agency-title"
             >
               For Agency Founders
-            </motion.p>
+            </motion.h3>
 
             <motion.p
               initial={{ x: -20, opacity: 0 }}
@@ -82,11 +86,13 @@ export default function Features() {
               transition={{ delay: 0.5, duration: 0.6, ease: easing }}
               className="text-primary-100 mb-6 list-inside list-disc space-y-2 text-xl/loose font-light max-xl:text-lg/8 max-lg:text-base/loose"
               data-testid="features-agency-list"
+              role="list"
+              aria-label="Agency founder benefits"
             >
-              <li>Proven agency playbooks</li>
-              <li>Reusable project templates</li>
-              <li>Ongoing mentorship and support</li>
-              <li>A trusted brand ecosystem</li>
+              <li role="listitem">Proven agency playbooks</li>
+              <li role="listitem">Reusable project templates</li>
+              <li role="listitem">Ongoing mentorship and support</li>
+              <li role="listitem">A trusted brand ecosystem</li>
             </motion.ul>
 
             <motion.p
@@ -99,127 +105,125 @@ export default function Features() {
               and grow fast.
             </motion.p>
 
-            <motion.div
+            <motion.button
               initial={{ x: -20, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.7, duration: 0.6, ease: easing }}
+              onClick={() => setActiveModal("sign-up")}
+              className="btn-primary bg-primary-500 border-primary-500 text-primary-1300 primary-glow hover:border-primary-50 hover:bg-primary-50 primary-glow-hover group flex items-center gap-x-3 rounded-full border-2 px-8 py-3.5 focus:ring-4 focus:ring-offset-2 focus:outline-none max-xl:gap-x-2 max-xl:px-6 max-xl:py-3"
+              aria-label="Open sign-up modal to start your agency"
+              data-testid="features-agency-cta"
+              type="button"
             >
-              <button
-                type="button"
-                aria-label="Join StartGrid Launch Program"
-                data-testid="features-agency-cta"
-                onClick={() => setActiveModal("sign-up")}
-                className="group bg-primary-500 text-primary-1300 border-primary-500 hover:bg-primary-50 hover:border-primary-50 focus:ring-primary-200 transition-properties primary-glow-hover primary-glow flex items-center gap-x-3 rounded-full border-2 px-8 py-3.5 focus:ring-4 focus:ring-offset-2 focus:outline-none max-xl:gap-x-2 max-xl:px-6 max-xl:py-3"
-              >
-                <span className="text-lg/8 max-xl:text-base/loose">
-                  Join StartGrid Launch Program
-                </span>
-                <div className="w-5 max-xl:w-4 max-sm:hidden">
-                  <ArrowRightLine
-                    alt="Arrow right line"
-                    className="transition-properties stroke-primary-1300 -mr-3 inline w-0 opacity-0 ease-in-out group-hover:w-3 group-hover:opacity-100"
-                    width={2.5}
-                  />
-                  <ArrowRight
-                    alt="Arrow right icon"
-                    className="stroke-primary-1300 inline w-5 max-xl:w-4"
-                    width={2}
-                  />
-                </div>
-              </button>
-            </motion.div>
+              <span className="text-lg/8 max-xl:text-base/loose">
+                Start Your Agency
+              </span>
+              <div className="w-5 max-xl:w-4 max-sm:hidden" aria-hidden="true">
+                <ArrowRightLine
+                  alt="Arrow right line"
+                  className="stroke-primary-1300 transition-properties -mr-3 inline w-0 opacity-0 ease-in-out group-hover:w-3 group-hover:opacity-100"
+                  width={2.5}
+                />
+                <ArrowRight
+                  alt="Arrow right icon"
+                  className="stroke-primary-1300 inline w-5 max-xl:w-4"
+                  width={2}
+                />
+              </div>
+            </motion.button>
           </div>
         </motion.div>
 
-        {/* Business Clients */}
+        {/* Business Growth */}
         <motion.div
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.8, duration: 0.6, ease: easing }}
-          className="grid grid-cols-2 items-center gap-x-16 max-md:grid-cols-1 max-md:gap-y-10"
+          className="grid grid-cols-2 items-center gap-x-16 max-xl:gap-x-12 max-md:grid-cols-1 max-md:gap-y-10"
+          data-testid="business-growth-section"
         >
-          <div className="max-w-lg justify-self-start max-md:max-w-max">
-            <motion.p
-              initial={{ x: -20, opacity: 0 }}
+          <div className="z-1 max-w-lg max-md:max-w-max">
+            <motion.h3
+              initial={{ x: 20, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.9, duration: 0.6, ease: easing }}
               className="mb-8 text-5xl/16 font-semibold tracking-tighter max-xl:mb-6 max-xl:text-4xl/10 max-lg:mb-4 max-lg:text-3xl/12 max-lg:tracking-tighter max-sm:text-2xl/8 max-sm:tracking-tight"
-              data-testid="features-client-title"
+              data-testid="features-business-title"
             >
-              For Business Clients
-            </motion.p>
+              For Business Growth
+            </motion.h3>
 
             <motion.p
-              initial={{ x: -20, opacity: 0 }}
+              initial={{ x: 20, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 1.0, duration: 0.6, ease: easing }}
               className="text-primary-100 mb-6 text-xl/loose font-light max-xl:text-lg/8 max-lg:text-base/loose"
-              data-testid="features-client-desc"
+              data-testid="features-business-desc"
             >
-              Need a Website, Branding, or Online Strategy? We’ve Got You. Our
-              in-house agency helps businesses like yours grow online with:
+              Get professional digital services that actually drive results. We
+              handle your online presence so you can focus on your business:
             </motion.p>
 
             <motion.ul
-              initial={{ x: -20, opacity: 0 }}
+              initial={{ x: 20, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 1.1, duration: 0.6, ease: easing }}
               className="text-primary-100 mb-6 list-inside list-disc space-y-2 text-xl/loose font-light max-xl:text-lg/8 max-lg:text-base/loose"
-              data-testid="features-client-list"
+              data-testid="features-business-list"
+              role="list"
+              aria-label="Business growth services"
             >
-              <li>Conversion-focused websites</li>
-              <li>Brand identity design</li>
-              <li>Automated marketing integrations</li>
-              <li>Ongoing web support and optimization</li>
+              <li role="listitem">High-conversion websites</li>
+              <li role="listitem">Brand identity & design</li>
+              <li role="listitem">Digital marketing strategies</li>
+              <li role="listitem">Ongoing support & optimization</li>
             </motion.ul>
 
             <motion.p
-              initial={{ x: -20, opacity: 0 }}
+              initial={{ x: 20, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 1.2, duration: 0.6, ease: easing }}
               className="text-primary-100 mb-8 text-xl/loose font-light max-xl:text-lg/8 max-lg:text-base/loose"
             >
-              We deliver clarity, creativity, and code fast.
+              We&apos;re not just another agency. We&apos;re your growth partner.
             </motion.p>
 
-            <motion.div
-              initial={{ x: -20, opacity: 0 }}
+            <motion.button
+              initial={{ x: 20, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 1.3, duration: 0.6, ease: easing }}
+              onClick={() => setActiveModal("sign-up")}
+              className="btn-primary bg-primary-500 border-primary-500 text-primary-1300 primary-glow hover:border-primary-50 hover:bg-primary-50 primary-glow-hover group flex items-center gap-x-3 rounded-full border-2 px-8 py-3.5 focus:ring-4 focus:ring-offset-2 focus:outline-none max-xl:gap-x-2 max-xl:px-6 max-xl:py-3"
+              aria-label="Open sign-up modal to grow your business"
+              data-testid="features-business-cta"
+              type="button"
             >
-              <button
-                type="button"
-                aria-label="Request a Free Consultation"
-                data-testid="features-client-cta"
-                onClick={() => setActiveModal("sign-up")}
-                className="group bg-primary-500 text-primary-1300 border-primary-500 hover:bg-primary-50 hover:border-primary-50 focus:ring-primary-200 transition-properties primary-glow-hover primary-glow flex items-center gap-x-3 rounded-full border-2 px-8 py-3.5 focus:ring-4 focus:ring-offset-2 focus:outline-none max-xl:gap-x-2 max-xl:px-6 max-xl:py-3"
-              >
-                <span className="text-lg/8 max-xl:text-base/loose">
-                  Request a Free Consultation
-                </span>
-                <div className="w-5 max-xl:w-4 max-sm:hidden">
-                  <ArrowRightLine
-                    alt="Arrow right line"
-                    className="transition-properties stroke-primary-1300 -mr-3 inline w-0 opacity-0 ease-in-out group-hover:w-3 group-hover:opacity-100"
-                    width={2.5}
-                  />
-                  <ArrowRight
-                    alt="Arrow right icon"
-                    className="stroke-primary-1300 inline w-5 max-xl:w-4"
-                    width={2}
-                  />
-                </div>
-              </button>
-            </motion.div>
+              <span className="text-lg/8 max-xl:text-base/loose">
+                Grow Your Business
+              </span>
+              <div className="w-5 max-xl:w-4 max-sm:hidden" aria-hidden="true">
+                <ArrowRightLine
+                  alt="Arrow right line"
+                  className="stroke-primary-1300 transition-properties -mr-3 inline w-0 opacity-0 ease-in-out group-hover:w-3 group-hover:opacity-100"
+                  width={2.5}
+                />
+                <ArrowRight
+                  alt="Arrow right icon"
+                  className="stroke-primary-1300 inline w-5 max-xl:w-4"
+                  width={2}
+                />
+              </div>
+            </motion.button>
           </div>
 
-          <figure className="z-1">
+          <figure className="max-h-[45rem] max-md:max-w-[90%] max-md:justify-self-center max-md:row-start-1">
             <img
               src={Contextual}
-              alt="Contextual Reminders graphic"
+              alt="Contextual Reminders graphic showing AI-powered task management and deadline tracking"
               loading="lazy"
-              className="max-h-[45rem] max-md:max-w-[90%] max-md:justify-self-center"
-              data-testid="features-reminders-graphic"
+              className="img-hover h-auto w-full"
+              data-testid="features-contextual-graphic"
+              decoding="async"
             />
           </figure>
         </motion.div>

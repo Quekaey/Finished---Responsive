@@ -1,19 +1,64 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./src/assets/Logo.svg" />
+    <link rel="icon" type="image/svg+xml" href="/src/assets/Logo.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="StartGrid is your launchpad, whether you’re an aspiring agency founder or a business ready to grow online. We give you the systems, support, and strategy to thrive in the digital world."
-    />
-    <title>StartGrid | Hybrid Digital Platform</title>
+    
+    <!-- Primary Meta Tags -->
+    <title>StartGrid - Grow Smarter. Launch Your Digital Agency or Grow Your Business</title>
+    <meta name="title" content="StartGrid - Grow Smarter. Launch Your Digital Agency or Grow Your Business" />
+    <meta name="description" content="Your digital launchpad! Empowering founders and businesses with expert guidance, AI-driven tools, and smart strategies to accelerate online growth. Launch your own agency or grow your business with StartGrid." />
+    <meta name="keywords" content="digital agency, business growth, startup, entrepreneurship, web design, digital marketing, AI tools, business strategy" />
+    <meta name="author" content="StartGrid" />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://startgrid.com/" />
+    <meta property="og:title" content="StartGrid - Grow Smarter. Launch Your Digital Agency or Grow Your Business" />
+    <meta property="og:description" content="Your digital launchpad! Empowering founders and businesses with expert guidance, AI-driven tools, and smart strategies to accelerate online growth." />
+    <meta property="og:image" content="/src/assets/graphics/HeroSection4.png" />
+    <meta property="og:site_name" content="StartGrid" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://startgrid.com/" />
+    <meta property="twitter:title" content="StartGrid - Grow Smarter. Launch Your Digital Agency or Grow Your Business" />
+    <meta property="twitter:description" content="Your digital launchpad! Empowering founders and businesses with expert guidance, AI-driven tools, and smart strategies to accelerate online growth." />
+    <meta property="twitter:image" content="/src/assets/graphics/HeroSection4.png" />
+    
+    <!-- Additional SEO -->
+    <meta name="theme-color" content="#44e5e7" />
+    <meta name="msapplication-TileColor" content="#44e5e7" />
+    <link rel="canonical" href="https://startgrid.com/" />
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="/src/assets/Noise.webp" as="image" />
+    <link rel="preload" href="/src/assets/graphics/HeroSection4.png" as="image" />
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "StartGrid",
+      "description": "Digital platform helping aspiring founders launch agencies and providing businesses with top-tier digital services",
+      "url": "https://startgrid.com",
+      "logo": "https://startgrid.com/src/assets/Logo.svg",
+      "sameAs": [
+        "https://twitter.com/startgrid",
+        "https://linkedin.com/company/startgrid"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service"
+      }
+    }
+    </script>
   </head>
   <body>
-    <div id="root">
-      <!-- our entire application will be rendered here -->
-    </div>
-    <script type="module" src="/src/main.jsx"></script>
+    <div id="root"></div>
+    <script type="module" src="/src/Main.jsx"></script>
   </body>
 </html>

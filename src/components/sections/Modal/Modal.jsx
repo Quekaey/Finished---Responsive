@@ -21,6 +21,11 @@ export default function Modal({ children, modal }) {
       transition={{ duration: 0.25, ease: "easeInOut" }}
       className="bg-primary-1300/50 fixed top-0 right-0 bottom-0 left-0 z-50 flex items-center justify-center px-24 py-32 backdrop-blur-sm max-lg:px-8 max-md:px-6"
       onClick={(e) => e.currentTarget === e.target && setActiveModal("")}
+      role="dialog"
+      aria-modal="true"
+      aria-label={`${modal} modal`}
+      data-testid={`modal-${modal}`}
+      id={`modal-${modal}`}
     >
       <motion.div
         initial={{ opacity: 0, y: 40 }}
@@ -37,6 +42,8 @@ export default function Modal({ children, modal }) {
         }
         transition={{ duration: 0.25, ease: "easeInOut" }}
         className="flex overflow-hidden rounded-2xl opacity-0 shadow-[0px_0px_20px_rgb(6,18,18,.10)]"
+        role="document"
+        aria-label={`${modal} modal content`}
       >
         {children}
       </motion.div>

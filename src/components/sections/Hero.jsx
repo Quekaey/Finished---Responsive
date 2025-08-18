@@ -14,9 +14,10 @@ export default function Hero() {
       aria-labelledby="hero-heading"
       style={{ contentVisibility: "auto" }}
       className="m-auto grid max-w-[90rem] grid-cols-[5fr_4fr] items-center gap-x-18 px-24 py-42 max-xl:grid-cols-2 max-xl:gap-x-12 max-xl:px-16 max-xl:py-38 max-lg:px-8 max-lg:py-32 max-md:grid-cols-1 max-md:grid-rows-[repeat(2,auto)] max-md:gap-y-12 max-md:px-6 max-md:py-24"
+      data-testid="hero-section"
     >
       {/* Text Column */}
-      <div>
+      <div role="contentinfo" aria-labelledby="hero-heading">
         <motion.h1
           id="hero-heading"
           data-testid="hero-heading"
@@ -34,6 +35,7 @@ export default function Hero() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.6, ease: easing }}
           className="text-primary-100 mb-10 text-xl/loose font-light max-xl:mb-8 max-xl:text-lg/8 max-lg:text-base/loose"
+          role="doc-subtitle"
         >
           Your digital launchpad! empowering founders and businesses with expert
           guidance, AI-driven tools, and smart strategies to accelerate online
@@ -45,6 +47,9 @@ export default function Hero() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.4, duration: 0.6, ease: easing }}
           className="flex flex-col items-center gap-x-4 gap-y-4 sm:flex-row"
+          role="group"
+          aria-label="Call to action buttons"
+          data-testid="hero-cta-buttons"
         >
           {/* Launch Agency */}
           <button
@@ -52,12 +57,12 @@ export default function Hero() {
             aria-label="Open sign-up modal to launch agency"
             data-testid="hero-launch-agency-button"
             onClick={() => setActiveModal("sign-up")}
-            className="text-primary-1300 bg-primary-500 border-primary-500 hover:border-primary-50 hover:bg-primary-50 focus:ring-primary-200 transition-properties primary-glow-hover primary-glow group flex items-center gap-x-3 rounded-full border-2 px-8 py-3.5 focus:ring-4 focus:ring-offset-2 focus:outline-none max-xl:gap-x-2 max-xl:px-6 max-xl:py-3"
+            className="btn-primary text-primary-1300 bg-primary-500 border-primary-500 hover:border-primary-50 hover:bg-primary-50 focus:ring-primary-200 transition-properties primary-glow-hover primary-glow group flex items-center gap-x-3 rounded-full border-2 px-8 py-3.5 focus:ring-4 focus:ring-offset-2 focus:outline-none max-xl:gap-x-2 max-xl:px-6 max-xl:py-3"
           >
             <span className="text-lg/8 max-xl:text-base/loose">
               Launch Agency
             </span>
-            <div className="w-5 max-xl:w-4 max-sm:hidden">
+            <div className="w-5 max-xl:w-4 max-sm:hidden" aria-hidden="true">
               <ArrowRightLine
                 alt="Arrow right line"
                 className="stroke-primary-1300 transition-properties -mr-3 inline w-0 opacity-0 ease-in-out group-hover:w-3 group-hover:opacity-100"
@@ -77,12 +82,12 @@ export default function Hero() {
             aria-label="Open sign-up modal to grow business"
             data-testid="hero-grow-business-button"
             onClick={() => setActiveModal("sign-up")}
-            className="text-primary-1300 bg-primary-500 border-primary-500 hover:border-primary-50 hover:bg-primary-50 focus:ring-primary-200 transition-properties primary-glow-hover primary-glow group flex items-center gap-x-3 rounded-full border-2 px-8 py-3.5 focus:ring-4 focus:ring-offset-2 focus:outline-none max-xl:gap-x-2 max-xl:px-6 max-xl:py-3"
+            className="btn-primary text-primary-1300 bg-primary-500 border-primary-500 hover:border-primary-50 hover:bg-primary-50 focus:ring-primary-200 transition-properties primary-glow-hover primary-glow group flex items-center gap-x-3 rounded-full border-2 px-8 py-3.5 focus:ring-4 focus:ring-offset-2 focus:outline-none max-xl:gap-x-2 max-xl:px-6 max-xl:py-3"
           >
             <span className="text-lg/8 max-xl:text-base/loose">
               Grow Business
             </span>
-            <div className="w-5 max-xl:w-4 max-sm:hidden">
+            <div className="w-5 max-xl:w-4 max-sm:hidden" aria-hidden="true">
               <ArrowRightLine
                 alt="Arrow right line"
                 className="stroke-primary-1300 transition-properties -mr-3 inline w-0 opacity-0 ease-in-out group-hover:w-3 group-hover:opacity-100"
@@ -98,24 +103,21 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      {/* Graphic Column */}
+      {/* Image Column */}
       <motion.div
-        initial={{ scale: 0.9, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ delay: 0.6, duration: 0.6, ease: easing }}
-        className="relative"
+        initial={{ x: 20, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ delay: 0.6, duration: 0.8, ease: easing }}
+        className="relative flex justify-center"
+        data-testid="hero-image-container"
       >
-        <div
-          className="bg-primary-1300 absolute inset-0 rounded-full blur-3xl"
-          style={{ willChange: "transform" }}
-        />
-
         <img
           src={HeroSection4}
-          alt="Hero graphic of an iPhone showing NoteFlows note summarizer"
-          loading="lazy"
-          data-testid="hero-graphic"
-          className="max-md:max-h-auto relative max-h-[30rem] justify-self-end max-md:max-w-[90%] max-md:justify-self-center max-sm:max-w-full"
+          alt="StartGrid platform visualization showing digital tools and growth strategies"
+          className="img-hover w-full max-w-lg object-contain"
+          data-testid="hero-image"
+          loading="eager"
+          decoding="async"
         />
       </motion.div>
     </section>

@@ -32,6 +32,9 @@ export default function FAQList({
       onViewportEnter={() => setInView(true)}
       onViewportLeave={() => setInView(false)}
       viewport={{ once: false, amount: "100%" }}
+      role="list"
+      aria-label={`${category} frequently asked questions`}
+      data-testid="faq-list"
     >
       {questions.map((question) => (
         <FAQ
