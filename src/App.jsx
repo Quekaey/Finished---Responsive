@@ -26,46 +26,37 @@ import { ModalContextProvider } from "./contexts/ModalContext";
 import MobileMenu from "./components/sections/MobileMenu/MobileMenu";
 import { MobileMenuContextProvider } from "./contexts/MobileMenuContext";
 
-// New Providers
-import { ThemeProvider } from "./contexts/ThemeContext";
+// Toast Provider
 import { ToastProvider } from "./contexts/ToastContext";
-
-// Performance Monitoring
-import PerformanceMonitor from "./components/ui/PerformanceMonitor";
 
 function App() {
   return (
-    <ThemeProvider>
-      <ToastProvider>
-        <ModalContextProvider>
-          <MobileMenuContextProvider>
-            <Page>
-              <Header>
-                <Navigation />
-                <Hero />
-                <Reviews />
-              </Header>
-              <Main>
-                <Logos />
-                <Features />
-                <FAQs />
-                <Testimonials />
-              </Main>
-              <Footer />
+    <ToastProvider>
+      <ModalContextProvider>
+        <MobileMenuContextProvider>
+          <Page>
+            <Header>
+              <Navigation />
+              <Hero />
+              <Reviews />
+            </Header>
+            <Main>
+              <Logos />
+              <Features />
+              <FAQs />
+              <Testimonials />
+            </Main>
+            <Footer />
 
-              <Modal modal="sign-up">
-                <SignUpModal />
-              </Modal>
+            <Modal modal="sign-up">
+              <SignUpModal />
+            </Modal>
 
-              <MobileMenu />
-            </Page>
-            
-            {/* Performance Monitoring */}
-            <PerformanceMonitor />
-          </MobileMenuContextProvider>
-        </ModalContextProvider>
-      </ToastProvider>
-    </ThemeProvider>
+            <MobileMenu />
+          </Page>
+        </MobileMenuContextProvider>
+      </ModalContextProvider>
+    </ToastProvider>
   );
 }
 

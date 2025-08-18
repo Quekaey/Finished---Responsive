@@ -12,6 +12,7 @@ export default function Features() {
 
   return (
     <section
+      id="features"
       aria-labelledby="features-heading"
       style={{ contentVisibility: "auto" }}
       className="bg-primary-1500 overflow-hidden bg-[url('../src/assets/Noise.webp')] bg-repeat"

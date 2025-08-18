@@ -18,17 +18,17 @@ const navigationLinks = [
   {
     id: 1,
     link: "Home",
-    href: "#",
+    href: "#hero",
   },
   {
     id: 2,
-    link: "About",
-    href: "#",
+    link: "Features",
+    href: "#features",
   },
   {
     id: 3,
     link: "FAQ's",
-    href: "#",
+    href: "#faqs",
   },
 ];
 

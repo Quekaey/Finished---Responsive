@@ -34,11 +34,49 @@ export default function Footer() {
           aria-label="Footer navigation"
           data-testid="footer-navigation"
         >
-          {footerCols.map((col) => (
+          <div key="features" data-testid="footer-column-features">
+            <h3 className="text-primary-50 mb-8 text-xl/loose font-semibold max-md:text-lg/8 max-md:tracking-tight">
+              Services
+            </h3>
+            <ul
+              className="flex flex-col gap-y-4"
+              role="list"
+              aria-label="Services links"
+            >
+              <li className="cursor-pointer" role="listitem">
+                <a
+                  className="link-hover text-primary-50 text-lg/8 font-light max-xl:text-base/loose"
+                  href="#features"
+                  aria-label="Navigate to Features section"
+                  data-testid="footer-link-features"
+                >
+                  Features
+                </a>
+              </li>
+              <li className="cursor-pointer" role="listitem">
+                <a
+                  className="link-hover text-primary-50 text-lg/8 font-light max-xl:text-base/loose"
+                  href="#testimonials"
+                  aria-label="Navigate to Testimonials section"
+                  data-testid="footer-link-testimonials"
+                >
+                  Testimonials
+                </a>
+              </li>
+              <li className="cursor-pointer" role="listitem">
+                <a
+                  className="link-hover text-primary-50 text-lg/8 font-light max-xl:text-base/loose"
+                  href="#faqs"
+                  aria-label="Navigate to FAQ section"
+                  data-testid="footer-link-faqs"
+                >
+                                     FAQ&apos;s
+                </a>
+              </li>
+            </ul>
+          </div>
+          {footerCols.slice(0, 3).map((col) => (
             <div key={col.id} data-testid={`footer-column-${col.id}`}>
-              <h3 className="text-primary-50 mb-8 text-xl/loose font-semibold max-md:text-lg/8 max-md:tracking-tight">
-                {col.category}
-              </h3>
               <ul 
                 className="flex flex-col gap-y-4"
                 role="list"
@@ -62,30 +100,12 @@ export default function Footer() {
         </nav>
       </div>
       
-      {/* Copyright and additional info */}
+      {/* Copyright - Centralized */}
       <div className="border-t border-primary-1200 m-auto max-w-[90rem] px-24 py-8 max-xl:px-16 max-lg:px-8 max-md:px-6">
-        <div className="flex justify-between items-center max-md:flex-col max-md:gap-y-4 max-md:text-center">
+        <div className="text-center">
           <p className="text-primary-100 text-sm">
             © {new Date().getFullYear()} StartGrid. All rights reserved.
           </p>
-          <div className="flex gap-x-6 max-md:gap-x-4">
-            <a 
-              href="#" 
-              className="link-hover text-primary-100 text-sm"
-              aria-label="Privacy Policy"
-              data-testid="footer-privacy-link"
-            >
-              Privacy Policy
-            </a>
-            <a 
-              href="#" 
-              className="link-hover text-primary-100 text-sm"
-              aria-label="Terms of Service"
-              data-testid="footer-terms-link"
-            >
-              Terms of Service
-            </a>
-          </div>
         </div>
       </div>
     </footer>

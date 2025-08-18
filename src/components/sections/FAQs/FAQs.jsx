@@ -21,6 +21,7 @@ export default function FAQs() {
 
   return (
     <section 
+      id="faqs"
       className="bg-gradient-to-bottom justify-items-center"
       aria-labelledby="faqs-heading"
       data-testid="faqs-section"
