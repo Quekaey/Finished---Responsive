@@ -1,5 +1,6 @@
 import Logo from "../icons/Logo";
 import MobileMenuIcon from "./MobileMenu/MobileMenuIcon";
+import ThemeToggle from "../ui/ThemeToggle";
 import { navigationLinks } from "../../utils/content";
 import { useModalContext } from "../../contexts/ModalContext";
 
@@ -53,6 +54,7 @@ export default function Navigation() {
         </ul>
 
         <div className="flex items-center gap-x-3 max-lg:hidden">
+          <ThemeToggle className="text-primary-100 hover:text-primary-50" />
           <button
             className="btn-primary bg-primary-500 border-primary-500 text-primary-1300 primary-glow hover:border-primary-50 hover:bg-primary-50 primary-glow-hover cursor-pointer rounded-full border-2 px-8 py-3.5 text-lg/8 font-normal max-xl:px-6 max-xl:py-3 max-xl:text-base/loose"
             onClick={() => setActiveModal("sign-up")}

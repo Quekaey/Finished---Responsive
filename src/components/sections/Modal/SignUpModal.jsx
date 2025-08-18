@@ -1,12 +1,17 @@
-import Close from "../../icons/Close";
 import { useState } from "react";
+import Close from "../../icons/Close";
+import Loading from "../../ui/Loading";
+import Progress from "../../ui/Progress";
 import { useModalContext } from "../../../contexts/ModalContext";
+import { useToast } from "../../../contexts/ToastContext";
 
 const initialState = { email: "", password: "" };
 
 export default function SignUpModal() {
   const { setActiveModal } = useModalContext();
-
+  const { success, error } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [progress, setProgress] = useState(0);
   const [checked, setChecked] = useState(false);
   const [inputs, setInputs] = useState(initialState);
 
@@ -19,12 +24,56 @@ export default function SignUpModal() {
     });
   }
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
-    if (checked) {
-      console.log(inputs);
+    
+    if (!checked) {
+      error("Please accept the terms and conditions");
+      return;
+    }
+
+    if (!inputs.email) {
+      error("Please enter your email address");
+      return;
+    }
+
+    setIsSubmitting(true);
+    setProgress(0);
+
+    // Simulate form submission with progress
+    const progressInterval = setInterval(() => {
+      setProgress(prev => {
+        if (prev >= 90) {
+          clearInterval(progressInterval);
+          return 90;
+        }
+        return prev + 10;
+      });
+    }, 200);
+
+    try {
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      
+      setProgress(100);
+      
+      // Show success message
+      success("Thank you! We'll be in touch soon.");
+      
+      // Reset form
       setInputs(initialState);
-      setActiveModal("");
+      setChecked(false);
+      
+      // Close modal after delay
+      setTimeout(() => {
+        setActiveModal("");
+      }, 1500);
+      
+    } catch {
+      error("Something went wrong. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+      setProgress(0);
     }
   }
 
@@ -48,11 +97,12 @@ export default function SignUpModal() {
       </div>
       <div className="bg-primary-1400 flex flex-col justify-between gap-y-24 bg-[url('../src/assets/Noise.webp')] bg-repeat p-10 max-md:px-6 max-md:py-8 max-sm:gap-y-16">
         <button
-          className="btn-secondary border-primary-75 hover:bg-primary-75 group transition-properties ml-auto w-fit cursor-pointer rounded-2xl border-2 p-3"
+          className="btn-secondary border-primary-75 hover:bg-primary-75 group transition-properties mr-auto w-fit cursor-pointer rounded-2xl border-2 p-3"
           onClick={() => setActiveModal("")}
           aria-label="Close sign-up modal"
           data-testid="signup-modal-close"
           type="button"
+          disabled={isSubmitting}
         >
           <Close
             className="stroke-primary-75 group-hover:stroke-primary-1300 transition-properties max-md:h-4 max-md:w-4"
@@ -67,6 +117,24 @@ export default function SignUpModal() {
           className="text-primary-50 flex flex-col gap-y-6 text-lg/8 font-semibold tracking-tight max-md:font-normal"
           data-testid="signup-form"
         >
+          {/* Progress Indicator */}
+          {isSubmitting && (
+            <div className="mb-4">
+              <Progress 
+                value={progress} 
+                max={100} 
+                type="bar" 
+                size="sm"
+                showLabel={false}
+                className="mb-2"
+              />
+              <p className="text-sm text-primary-100 text-center">
+                {progress < 50 ? "Preparing your request..." : 
+                 progress < 90 ? "Processing..." : "Almost done!"}
+              </p>
+            </div>
+          )}
+
           <div>
             <label 
               htmlFor="email-input"
@@ -79,7 +147,8 @@ export default function SignUpModal() {
               name="email"
               type="email"
               required
-              className="bg-primary-75 placeholder-primary-1500 text-primary-1300 mt-2 block w-full rounded-full px-8 py-4 font-normal placeholder:text-base placeholder:font-light placeholder:opacity-20 max-md:px-6 max-md:py-3 focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-primary-1400"
+              disabled={isSubmitting}
+              className="bg-primary-75 placeholder-primary-1500 text-primary-1300 mt-2 block w-full rounded-full px-8 py-4 font-normal placeholder:text-base placeholder:font-light placeholder:opacity-20 max-md:px-6 max-md:py-3 focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-primary-1400 disabled:opacity-50 disabled:cursor-not-allowed"
               placeholder="janedoe@gmail.com"
               onChange={handleInputs}
               value={inputs.email}
@@ -101,13 +170,14 @@ export default function SignUpModal() {
                 type="checkbox"
                 checked={checked}
                 onChange={() => setChecked((curr) => !curr)}
-                className="h-4 w-4 text-primary-500 focus:ring-primary-500 border-primary-300 rounded"
+                disabled={isSubmitting}
+                className="h-4 w-4 text-primary-500 focus:ring-primary-500 border-primary-300 rounded disabled:opacity-50"
                 required
                 data-testid="terms-checkbox"
               />
               <label 
                 htmlFor="terms-checkbox"
-                className="text-sm text-primary-100 cursor-pointer"
+                className="text-sm text-primary-100 cursor-pointer disabled:cursor-not-allowed"
               >
                 I agree to the terms and conditions
               </label>
@@ -115,12 +185,19 @@ export default function SignUpModal() {
             
             <button
               type="submit"
-              disabled={!checked}
-              className="btn-primary bg-primary-500 primary-glow-hover transition-properties w-full cursor-pointer rounded-full py-4 text-lg/8 max-md:px-6 max-md:py-3 max-md:text-base/loose disabled:opacity-50 disabled:cursor-not-allowed"
+              disabled={!checked || isSubmitting}
+              className="btn-primary bg-primary-500 border-primary-500 text-primary-1300 primary-glow-hover transition-properties w-full cursor-pointer rounded-full py-4 text-lg/8 max-md:px-6 max-md:py-3 max-md:text-base/loose disabled:opacity-50 disabled:cursor-not-allowed relative"
               aria-label="Submit sign-up form to get started"
               data-testid="signup-submit-button"
             >
-              Get Started
+              {isSubmitting ? (
+                <div className="flex items-center justify-center gap-x-2">
+                  <Loading type="dots" size="sm" />
+                  <span>Submitting...</span>
+                </div>
+              ) : (
+                "Get Started"
+              )}
             </button>
           </div>
         </form>
