@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Close from "../../icons/Close";
-import Loading from "../../ui/Loading";
 import Progress from "../../ui/Progress";
 import { useModalContext } from "../../../contexts/ModalContext";
 import { useToast } from "../../../contexts/ToastContext";
@@ -163,7 +162,6 @@ export default function SignUpModal() {
             >
               {isSubmitting ? (
                 <div className="flex items-center justify-center gap-x-2">
-                  <Loading type="dots" size="sm" />
                   <span>Submitting...</span>
                 </div>
               ) : (
