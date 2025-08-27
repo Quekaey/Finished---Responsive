@@ -8,6 +8,7 @@ export default function Logo({ width = 1.5, className, alt }) {
       xmlns="http://www.w3.org/2000/svg"
       className={className}
       alt={alt}
+      style={{ transform: 'rotate(90deg)' }}
     >
       <path
         d="M19.9938 3.5H30.0063"

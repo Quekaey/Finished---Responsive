@@ -27,81 +27,11 @@ const navigationLinks = [
   },
   {
     id: 3,
-    link: "FAQ's",
-    href: "#faqs",
+    link: "How It Works",
+    href: "#how-it-works",
   },
 ];
 
-const reviews = [
-  {
-    id: 1,
-    src: new URL("../assets/headshots/img-11.webp", import.meta.url),
-    alt: "Rachel Foster",
-  },
-  {
-    id: 2,
-    src: new URL("../assets/headshots/img-7.webp", import.meta.url),
-    alt: "Emily Thompson",
-  },
-  {
-    id: 3,
-    src: new URL("../assets/headshots/img-5.webp", import.meta.url),
-    alt: "Daniel Harris",
-  },
-  {
-    id: 4,
-    src: new URL("../assets/headshots/img-9.webp", import.meta.url),
-    alt: "Sarah Lee",
-  },
-  {
-    id: 5,
-    src: new URL("../assets/headshots/img-15.webp", import.meta.url),
-    alt: "Lucas King",
-  },
-];
-
-const logos = [
-  {
-    id: 1,
-    src: new URL("../assets/logos/Netflix.webp", import.meta.url),
-    alt: "Netflix Logo",
-  },
-  {
-    id: 2,
-    src: new URL("../assets/logos/ExxonMobile.webp", import.meta.url),
-    alt: "Exxon Mobile Logo",
-  },
-  {
-    id: 3,
-    src: new URL("../assets/logos/Microsoft.webp", import.meta.url),
-    alt: "Microsoft Logo",
-  },
-  {
-    id: 4,
-    src: new URL("../assets/logos/Vice.webp", import.meta.url),
-    alt: "Vice Logo",
-  },
-  {
-    id: 5,
-    src: new URL("../assets/logos/Walmart.webp", import.meta.url),
-    alt: "Walmart Logo",
-  },
-  {
-    id: 6,
-    src: new URL("../assets/logos/Chase.webp", import.meta.url),
-    alt: "Chase Logo",
-  },
-  {
-    id: 7,
-    src: new URL("../assets/logos/Visa.webp", import.meta.url),
-    alt: "Visa Logo",
-  },
-  {
-    id: 8,
-    src: new URL("../assets/logos/Amazon.webp", import.meta.url),
-    alt: "Amazon Logo",
-  },
-];
 
 const frequentlyAskedQuestions = [
   {
@@ -274,8 +204,7 @@ const testimonials = [
     description:
       "From day one, they treated my business like their own. \
     I’ve never felt more supported by a partner.",
-    src: new URL("../assets/headshots/img-7.webp", import.meta.url),
-    name: "Tunde Bakare",
+    name: "Joshua Rivera",
     title: "Clothing Brand Owner",
   },
   {
@@ -284,8 +213,7 @@ const testimonials = [
     description:
       "StartGrid’s systems work. \
     I now spend more time with clients and less time figuring out operations.",
-    src: new URL("../assets/headshots/img-3.webp", import.meta.url),
-    name: "Abdulrahman Bello",
+    name: "Daniel Nelson",
     title: "Agency Founder",
   },
   {
@@ -294,7 +222,6 @@ const testimonials = [
     description:
       "The results speak for themselves \
     traffic is up, conversions are higher, and my team is thrilled.",
-    src: new URL("../assets/headshots/img-9.webp", import.meta.url),
     name: "Patricia Collins",
     title: "SaaS Product Manager",
   },
@@ -304,7 +231,6 @@ const testimonials = [
     description:
       "I joined the launch program and landed \
     my first international client within weeks.",
-    src: new URL("../assets/headshots/img-4.webp", import.meta.url),
     name: "Jonathan Moore",
     title: "Software Engineer",
   },
@@ -314,8 +240,6 @@ const testimonials = [
     description:
       "They didn’t just build a website \
     they built a brand experience my customers love.",
-    src: new URL("../assets/headshots/img-15.webp", import.meta.url),
-
     name: "Rachel Foster",
     title: "Project Manager",
   },
@@ -325,8 +249,7 @@ const testimonials = [
     description:
       "Being part of StartGrid’s founder program \
     gave me the confidence and network to grow quickly.",
-    src: new URL("../assets/headshots/img-5.webp", import.meta.url),
-    name: "Emeka Eze",
+    name: "Ryan Peterson",
     title: "Digital Consultant",
   },
   {
@@ -335,7 +258,6 @@ const testimonials = [
     description:
       "We wanted a modern, mobile-friendly site. \
     StartGrid delivered exactly what we needed on time and on budget.",
-    src: new URL("../assets/headshots/img-1.webp", import.meta.url),
     name: "Jessica Lee",
     title: "Nonprofit Director",
   },
@@ -345,8 +267,7 @@ const testimonials = [
     description:
       "Their coaching style is friendly yet firm \
     they push you to achieve your business goals.",
-    src: new URL("../assets/headshots/img-6.webp", import.meta.url),
-    name: "Chidera Umeh",
+    name: "Victoria Hill",
     title: " Agency Co-Founder",
   },
   {
@@ -355,7 +276,6 @@ const testimonials = [
     description:
       "They handled our eCommerce setup flawlessly. \
     Sales jumped by 30% in the first month after launch.",
-    src: new URL("../assets/headshots/img-8.webp", import.meta.url),
     name: "David Miller",
     title: "Online Store Owner",
   },
@@ -365,8 +285,7 @@ const testimonials = [
     description:
       "I started with no clear plan, \
     but the framework they provided helped me build a professional agency from scratch.",
-    src: new URL("../assets/headshots/img-13.webp", import.meta.url),
-    name: "Bola Adeyemi",
+    name: "Madison Taylor",
     title: "Tech Entrepreneur",
   },
   {
@@ -375,7 +294,6 @@ const testimonials = [
     description:
       "The community and resources here are unmatched. \
     You’re never building alone with StartGrid.",
-    src: new URL("../assets/headshots/img-10.webp", import.meta.url),
     name: "Sarah Thompson",
     title: "Startup Founder",
   },
@@ -385,8 +303,7 @@ const testimonials = [
     description:
       "From branding to launch, StartGrid delivered beyond expectations. \
     We now get compliments from clients daily.",
-    src: new URL("../assets/headshots/img-14.webp", import.meta.url),
-    name: "Oluwaseun Adebayo",
+    name: "Harper Thomas",
     title: "Marketing Consultant",
   },
   {
@@ -395,8 +312,7 @@ const testimonials = [
     description:
       "Our website redesign increased our inbound leads by 45%. \
     The StartGrid team really understands business goals.",
-    src: new URL("../assets/headshots/img-12.webp", import.meta.url),
-    name: "Ifeanyi Nwosu",
+    name: "Amelia Wright",
     title: "Real Estate CEO",
   },
   {
@@ -405,7 +321,6 @@ const testimonials = [
     description:
       "Their mentorship and playbooks saved me months of trial and error. \
     I now run a profitable web design business.",
-    src: new URL("../assets/headshots/img-15.webp", import.meta.url),
     name: "Amanda Brooks",
     title: "Web Agency Owner",
   },
@@ -415,8 +330,7 @@ const testimonials = [
     description:
       "StartGrid gave me the structure I needed to finally launch my own agency. \
     Within two months, I signed my first three clients.",
-    src: new URL("../assets/headshots/img-2.webp", import.meta.url),
-    name: "Chinonso Okeke",
+    name: "Isla Green",
     title: "Digital Agency Founder",
   },
 ];
@@ -455,8 +369,6 @@ const features = {
 
 export {
   navigationLinks,
-  reviews,
-  logos,
   frequentlyAskedQuestions,
   testimonials,
   footerCols,

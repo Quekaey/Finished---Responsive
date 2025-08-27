@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useState, useRef } from "react";
 import SmartOrganization2 from "../../assets/graphics/SmartOrganization2.png";
 import Contextual from "../../assets/graphics/Contextual.png";
 import ArrowRight from "../icons/ArrowRight";
@@ -9,14 +10,69 @@ const easing = [0.6, -0.05, 0.01, 0.99];
 
 export default function Features() {
   const { setActiveModal } = useModalContext();
+  const [touchStart, setTouchStart] = useState(null);
+  const [touchEnd, setTouchEnd] = useState(null);
+  const sectionRef = useRef(null);
+
+  // Minimum swipe distance (in px)
+  const minSwipeDistance = 50;
+
+  const onTouchStart = (e) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const onTouchMove = (e) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+
+    if (isLeftSwipe) {
+      // Swipe left - could navigate to next section or trigger action
+      console.log('Swiped left');
+      // Add visual feedback for mobile users
+      if (sectionRef.current) {
+        sectionRef.current.style.transform = 'translateX(-5px)';
+        setTimeout(() => {
+          if (sectionRef.current) {
+            sectionRef.current.style.transform = 'translateX(0)';
+          }
+        }, 150);
+      }
+    }
+    
+    if (isRightSwipe) {
+      // Swipe right - could navigate to previous section or trigger action
+      console.log('Swiped right');
+      // Add visual feedback for mobile users
+      if (sectionRef.current) {
+        sectionRef.current.style.transform = 'translateX(5px)';
+        setTimeout(() => {
+          if (sectionRef.current) {
+            sectionRef.current.style.transform = 'translateX(0)';
+          }
+        }, 150);
+      }
+    }
+  };
 
   return (
     <section
+      ref={sectionRef}
       id="features"
       aria-labelledby="features-heading"
       style={{ contentVisibility: "auto" }}
-      className="bg-primary-1500 overflow-hidden bg-[url('../src/assets/Noise.webp')] bg-repeat"
+      className="bg-primary-1500 overflow-hidden bg-[url('../src/assets/Noise.webp')] bg-repeat scroll-smooth transition-transform duration-150 ease-out"
       data-testid="features-section"
+      onTouchStart={onTouchStart}
+      onTouchMove={onTouchMove}
+      onTouchEnd={onTouchEnd}
     >
       <div className="text-primary-50 relative m-auto max-w-[90rem] px-24 py-32 max-xl:px-16 max-xl:py-24 max-lg:px-8 max-md:px-6">
         {/* Blurred background */}
@@ -45,10 +101,10 @@ export default function Features() {
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.6, ease: easing }}
-          className="mb-20 grid grid-cols-2 items-center gap-x-16 max-xl:mb-12 max-md:mb-16 max-md:grid-cols-1 max-md:gap-y-10"
+          className="mb-20 grid grid-cols-2 items-center gap-x-16 max-xl:mb-12 max-md:mb-12 max-md:grid-cols-1 max-md:gap-y-12"
           data-testid="agency-founders-section"
         >
-          <figure className="max-h-[45rem] max-md:max-w-[90%] max-md:justify-self-center">
+          <figure className="max-h-[45rem] max-md:max-w-full max-md:justify-self-center">
             <img
               src={SmartOrganization2}
               alt="Smart Organization graphic showing AI-powered note categorization and organization tools"
@@ -85,7 +141,7 @@ export default function Features() {
               initial={{ x: -20, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.5, duration: 0.6, ease: easing }}
-              className="text-primary-100 mb-6 list-inside list-disc space-y-2 text-xl/loose font-light max-xl:text-lg/8 max-lg:text-base/loose"
+              className="text-primary-100 mb-6 list-inside list-disc space-y-2 max-md:space-y-3 text-xl/loose font-light max-xl:text-lg/8 max-lg:text-base/loose"
               data-testid="features-agency-list"
               role="list"
               aria-label="Agency founder benefits"
@@ -110,16 +166,16 @@ export default function Features() {
               initial={{ x: -20, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.7, duration: 0.6, ease: easing }}
-              onClick={() => setActiveModal("sign-up")}
-              className="btn-primary bg-primary-500 border-primary-500 text-primary-1300 primary-glow hover:border-primary-50 hover:bg-primary-50 primary-glow-hover group flex items-center gap-x-3 rounded-full border-2 px-8 py-3.5 focus:ring-4 focus:ring-offset-2 focus:outline-none max-xl:gap-x-2 max-xl:px-6 max-xl:py-3"
-              aria-label="Open sign-up modal to start your agency"
+              onClick={() => setActiveModal("launch-agency")}
+              className="btn-primary bg-primary-500 border-primary-500 text-primary-1300 primary-glow hover:border-primary-50 hover:bg-primary-50 primary-glow-hover active:scale-95 transition-transform group flex items-center gap-x-3 rounded-full border-2 px-8 py-3.5 focus:ring-4 focus:ring-offset-2 focus:outline-none max-xl:gap-x-2 max-xl:px-6 max-xl:py-3 max-md:px-6 max-md:py-4"
+              aria-label="Open launch agency modal to start your agency"
               data-testid="features-agency-cta"
               type="button"
             >
               <span className="text-lg/8 max-xl:text-base/loose">
                 Start Your Agency
               </span>
-              <div className="w-5 max-xl:w-4 max-sm:hidden" aria-hidden="true">
+              <div className="w-5 max-xl:w-4 max-sm:w-4" aria-hidden="true">
                 <ArrowRightLine
                   alt="Arrow right line"
                   className="stroke-primary-1300 transition-properties -mr-3 inline w-0 opacity-0 ease-in-out group-hover:w-3 group-hover:opacity-100"
@@ -127,7 +183,7 @@ export default function Features() {
                 />
                 <ArrowRight
                   alt="Arrow right icon"
-                  className="stroke-primary-1300 inline w-5 max-xl:w-4"
+                  className="stroke-primary-1300 inline w-5 max-xl:w-4 max-sm:w-4"
                   width={2}
                 />
               </div>
@@ -140,7 +196,7 @@ export default function Features() {
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.8, duration: 0.6, ease: easing }}
-          className="grid grid-cols-2 items-center gap-x-16 max-xl:gap-x-12 max-md:grid-cols-1 max-md:gap-y-10"
+          className="grid grid-cols-2 items-center gap-x-16 max-xl:gap-x-12 max-md:grid-cols-1 max-md:gap-y-12"
           data-testid="business-growth-section"
         >
           <div className="z-1 max-w-lg max-md:max-w-max">
@@ -169,7 +225,7 @@ export default function Features() {
               initial={{ x: 20, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 1.1, duration: 0.6, ease: easing }}
-              className="text-primary-100 mb-6 list-inside list-disc space-y-2 text-xl/loose font-light max-xl:text-lg/8 max-lg:text-base/loose"
+              className="text-primary-100 mb-6 list-inside list-disc space-y-2 max-md:space-y-3 text-xl/loose font-light max-xl:text-lg/8 max-lg:text-base/loose"
               data-testid="features-business-list"
               role="list"
               aria-label="Business growth services"
@@ -193,16 +249,16 @@ export default function Features() {
               initial={{ x: 20, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 1.3, duration: 0.6, ease: easing }}
-              onClick={() => setActiveModal("sign-up")}
-              className="btn-primary bg-primary-500 border-primary-500 text-primary-1300 primary-glow hover:border-primary-50 hover:bg-primary-50 primary-glow-hover group flex items-center gap-x-3 rounded-full border-2 px-8 py-3.5 focus:ring-4 focus:ring-offset-2 focus:outline-none max-xl:gap-x-2 max-xl:px-6 max-xl:py-3"
-              aria-label="Open sign-up modal to grow your business"
+              onClick={() => setActiveModal("grow-business")}
+              className="btn-primary bg-primary-500 border-primary-500 text-primary-1300 primary-glow hover:border-primary-50 hover:bg-primary-50 primary-glow-hover active:scale-95 transition-transform group flex items-center gap-x-3 rounded-full border-2 px-8 py-3.5 focus:ring-4 focus:ring-offset-2 focus:outline-none max-xl:gap-x-2 max-xl:px-6 max-xl:py-3 max-md:px-6 max-md:py-4"
+              aria-label="Open grow business modal to grow your business"
               data-testid="features-business-cta"
               type="button"
             >
               <span className="text-lg/8 max-xl:text-base/loose">
                 Grow Your Business
               </span>
-              <div className="w-5 max-xl:w-4 max-sm:hidden" aria-hidden="true">
+              <div className="w-5 max-xl:w-4 max-sm:w-4" aria-hidden="true">
                 <ArrowRightLine
                   alt="Arrow right line"
                   className="stroke-primary-1300 transition-properties -mr-3 inline w-0 opacity-0 ease-in-out group-hover:w-3 group-hover:opacity-100"
@@ -210,14 +266,14 @@ export default function Features() {
                 />
                 <ArrowRight
                   alt="Arrow right icon"
-                  className="stroke-primary-1300 inline w-5 max-xl:w-4"
+                  className="stroke-primary-1300 inline w-5 max-xl:w-4 max-sm:w-4"
                   width={2}
                 />
               </div>
             </motion.button>
           </div>
 
-          <figure className="max-h-[45rem] max-md:max-w-[90%] max-md:justify-self-center max-md:row-start-1">
+          <figure className="max-h-[45rem] max-md:max-w-full max-md:justify-self-center">
             <img
               src={Contextual}
               alt="Contextual Reminders graphic showing AI-powered task management and deadline tracking"

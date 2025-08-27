@@ -5,12 +5,14 @@ import Page from "./components/sections/Page";
 import Header from "./components/sections/Header";
 import Navigation from "./components/sections/Navigation";
 import Hero from "./components/sections/Hero";
-import Reviews from "./components/sections/Reviews";
 
 // Main
 import Main from "./components/sections/Main";
-import Logos from "./components/sections/Logos";
 import Features from "./components/sections/Features";
+import HowItWorks from "./components/sections/HowItWorks";
+import IndustriesWeServe from "./components/sections/IndustriesWeServe";
+import ToolsAndResources from "./components/sections/ToolsAndResources";
+import PartnershipOpportunities from "./components/sections/PartnershipOpportunities";
 import FAQs from "./components/sections/FAQs/FAQs";
 import Testimonials from "./components/sections/Tesimonials/Testimonials";
 
@@ -20,6 +22,9 @@ import Footer from "./components/sections/Footer";
 // Modal
 import Modal from "./components/sections/Modal/Modal";
 import SignUpModal from "./components/sections/Modal/SignUpModal";
+import LaunchAgencyModal from "./components/sections/Modal/LaunchAgencyModal";
+import GrowBusinessModal from "./components/sections/Modal/GrowBusinessModal";
+import PartnershipInquiryModal from "./components/sections/Modal/PartnershipInquiryModal";
 import { ModalContextProvider } from "./contexts/ModalContext";
 
 // Mobile Menu
@@ -38,11 +43,13 @@ function App() {
             <Header>
               <Navigation />
               <Hero />
-              <Reviews />
             </Header>
             <Main>
-              <Logos />
               <Features />
+              <HowItWorks />
+              <IndustriesWeServe />
+              <ToolsAndResources />
+              <PartnershipOpportunities />
               <FAQs />
               <Testimonials />
             </Main>
@@ -50,6 +57,18 @@ function App() {
 
             <Modal modal="sign-up">
               <SignUpModal />
+            </Modal>
+
+            <Modal modal="launch-agency">
+              <LaunchAgencyModal />
+            </Modal>
+
+            <Modal modal="grow-business">
+              <GrowBusinessModal />
+            </Modal>
+
+            <Modal modal="partnership-inquiry">
+              <PartnershipInquiryModal />
             </Modal>
 
             <MobileMenu />

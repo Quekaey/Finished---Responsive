@@ -42,15 +42,7 @@ export default function Testimonal({ test }) {
       >
         {test.description}
       </blockquote>
-      <div className="flex items-center gap-x-6 max-xl:gap-x-4">
-        <img
-          src={test.src}
-          alt={`${test.name} headshot`}
-          className="img-hover h-18 rounded-full max-xl:h-16"
-          loading="lazy"
-          decoding="async"
-          data-testid="testimonial-avatar"
-        />
+      <div className="flex items-center">
         <div>
           <p 
             className="text-primary-500 text-xl/7 font-bold tracking-tight max-xl:text-lg/8"

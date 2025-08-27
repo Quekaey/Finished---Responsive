@@ -14,18 +14,18 @@ export default function Hero() {
       id="hero"
       aria-labelledby="hero-heading"
       style={{ contentVisibility: "auto" }}
-      className="m-auto grid max-w-[90rem] grid-cols-[5fr_4fr] items-center gap-x-18 px-24 py-42 max-xl:grid-cols-2 max-xl:gap-x-12 max-xl:px-16 max-xl:py-38 max-lg:px-8 max-lg:py-32 max-md:grid-cols-1 max-md:grid-rows-[repeat(2,auto)] max-md:gap-y-12 max-md:px-6 max-md:py-24"
+      className="m-auto grid max-w-[90rem] grid-cols-[5fr_4fr] items-center gap-x-20 px-24 py-32 max-xl:grid-cols-2 max-xl:gap-x-16 max-xl:px-16 max-xl:py-28 max-lg:px-8 max-lg:py-24 max-md:grid-cols-1 max-md:grid-rows-[repeat(2,auto)] max-md:gap-y-16 max-md:px-6 max-md:py-20 max-sm:py-16 max-sm:gap-y-12"
       data-testid="hero-section"
     >
       {/* Text Column */}
-      <div role="contentinfo" aria-labelledby="hero-heading">
+      <div role="contentinfo" aria-labelledby="hero-heading" className="max-md:text-center">
         <motion.h1
           id="hero-heading"
           data-testid="hero-heading"
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, ease: easing }}
-          className="text-primary-50 mb-6 text-6xl/18 font-semibold tracking-tighter max-xl:mb-4 max-xl:text-5xl/16 max-lg:text-4xl/10 max-lg:tracking-tight max-sm:text-3xl/9 max-sm:tracking-tighter"
+          className="text-primary-50 mb-8 text-6xl/18 font-semibold tracking-tighter max-xl:mb-6 max-xl:text-5xl/16 max-lg:text-4xl/10 max-lg:mb-6 max-lg:tracking-tight max-md:text-3xl/10 max-md:mb-6 max-sm:text-2xl/8 max-sm:mb-4 max-sm:tracking-tight"
         >
           Grow Smarter. Start with{" "}
           <span className="gradient-text text-shadow-md">StartGrid</span>.
@@ -36,7 +36,7 @@ export default function Hero() {
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.6, ease: easing }}
-          className="text-primary-100 mb-10 text-xl/loose font-light max-xl:mb-8 max-xl:text-lg/8 max-lg:text-base/loose"
+          className="text-primary-100 mb-12 text-xl/loose font-light max-xl:mb-10 max-xl:text-lg/8 max-lg:text-base/loose max-lg:mb-8 max-md:text-base/loose max-md:mb-8 max-sm:text-sm/loose max-sm:mb-6"
           role="doc-subtitle"
         >
           Your digital launchpad! empowering founders and businesses with expert
@@ -48,7 +48,7 @@ export default function Hero() {
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.4, duration: 0.6, ease: easing }}
-          className="flex flex-col items-center gap-x-4 gap-y-4 sm:flex-row"
+          className="flex flex-col items-center gap-x-6 gap-y-6 sm:flex-row max-md:gap-y-4"
           role="group"
           aria-label="Call to action buttons"
           data-testid="hero-cta-buttons"
@@ -56,14 +56,14 @@ export default function Hero() {
           {/* Launch Agency */}
           <motion.button
             type="button"
-            aria-label="Open sign-up modal to launch agency"
+            aria-label="Open launch agency modal"
             data-testid="hero-launch-agency-button"
-            onClick={() => setActiveModal("sign-up")}
-            className="btn-primary text-primary-1300 bg-primary-500 border-primary-500 hover:border-primary-50 hover:bg-primary-50 focus:ring-primary-200 transition-properties primary-glow-hover primary-glow group flex items-center gap-x-3 rounded-full border-2 px-8 py-3.5 focus:ring-4 focus:ring-offset-2 focus:outline-none max-xl:gap-x-2 max-xl:px-6 max-xl:py-3"
+            onClick={() => setActiveModal("launch-agency")}
+            className="btn-primary text-primary-1300 bg-primary-500 border-primary-500 hover:border-primary-50 hover:bg-primary-50 focus:ring-primary-200 transition-properties primary-glow-hover primary-glow group flex items-center gap-x-3 rounded-full border-2 px-8 py-3.5 focus:ring-4 focus:ring-offset-2 focus:outline-none max-xl:gap-x-2 max-xl:px-6 max-xl:py-3 max-md:px-6 max-md:py-3.5 max-sm:px-5 max-sm:py-3 max-sm:text-sm"
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
           >
-            <span className="text-lg/8 max-xl:text-base/loose">
+            <span className="text-lg/8 max-xl:text-base/loose max-md:text-base max-sm:text-sm">
               Launch Agency
             </span>
             <div className="w-5 max-xl:w-4 max-sm:hidden" aria-hidden="true">
@@ -83,14 +83,14 @@ export default function Hero() {
           {/* Grow Business */}
           <motion.button
             type="button"
-            aria-label="Open sign-up modal to grow business"
+            aria-label="Open grow business modal"
             data-testid="hero-grow-business-button"
-            onClick={() => setActiveModal("sign-up")}
-            className="btn-primary text-primary-1300 bg-primary-500 border-primary-500 hover:border-primary-50 hover:bg-primary-50 focus:ring-primary-200 transition-properties primary-glow-hover primary-glow group flex items-center gap-x-3 rounded-full border-2 px-8 py-3.5 focus:ring-4 focus:ring-offset-2 focus:outline-none max-xl:gap-x-2 max-xl:px-6 max-xl:py-3"
+            onClick={() => setActiveModal("grow-business")}
+            className="btn-primary text-primary-1300 bg-primary-500 border-primary-500 hover:border-primary-50 hover:bg-primary-50 focus:ring-primary-200 transition-properties primary-glow-hover primary-glow group flex items-center gap-x-3 rounded-full border-2 px-8 py-3.5 focus:ring-4 focus:ring-offset-2 focus:outline-none max-xl:gap-x-2 max-xl:px-6 max-xl:py-3 max-md:px-6 max-md:py-3.5 max-sm:px-5 max-sm:py-3 max-sm:text-sm"
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
           >
-            <span className="text-lg/8 max-xl:text-base/loose">
+            <span className="text-lg/8 max-xl:text-base/loose max-md:text-base max-sm:text-sm">
               Grow Business
             </span>
             <div className="w-5 max-xl:w-4 max-sm:hidden" aria-hidden="true">
@@ -113,7 +113,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 0.6, ease: easing }}
-          className="mt-12 flex gap-x-8 max-md:gap-x-6 max-sm:flex-col max-sm:gap-y-4"
+          className="mt-12 flex gap-x-8 max-md:gap-x-6 max-sm:flex-col max-sm:gap-y-6 max-sm:mt-8"
           data-testid="hero-stats"
         >
           <motion.div 
