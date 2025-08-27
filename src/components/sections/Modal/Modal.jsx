@@ -19,7 +19,7 @@ export default function Modal({ children, modal }) {
         },
       }}
       transition={{ duration: 0.25, ease: "easeInOut" }}
-      className="bg-primary-1300/50 fixed top-0 right-0 bottom-0 left-0 z-50 flex items-center justify-center px-24 py-32 backdrop-blur-sm max-lg:px-8 max-md:px-6"
+      className="bg-primary-1300/50 fixed top-0 right-0 bottom-0 left-0 z-50 flex items-center justify-center px-24 py-32 backdrop-blur-sm max-lg:px-8 max-lg:py-24 max-md:px-6 max-md:py-16 max-sm:px-4 max-sm:py-8"
       onClick={(e) => e.currentTarget === e.target && setActiveModal("")}
       role="dialog"
       aria-modal="true"
